@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SDPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityType Name="EVENT_BANNER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="EVENT_TARGET_TYPE" Type="nvarchar(max)" />
+    <Property Name="EVENT_TARGET" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_CALENDAR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="EVENT_TARGET" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_DAILY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_FLASH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_REGULAR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_SPONSOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_UPCOMING">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_IMAGES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IMAGE_HEADER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IMAGE_TITLE" Type="nvarchar(max)" />
+    <Property Name="IMAGE_ATTACHMENT" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IMAGE_TARGET" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_MEDIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MEDIA_HEADER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_TITLE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_TYPE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_ATTACHMENT" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_QUOTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUOTE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_VIDEOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VIDEO_HEADER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VIDEO_TITLE" Type="nvarchar(max)" />
+    <Property Name="VIDEO_URL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NOTIFICATION_DEVICES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DEVICE_ID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DEVICE_TYPE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ROLE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SEVA_ANNADANAM_MEDIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MEDIA_HEADER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_TITLE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_TYPE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_ATTACHMENT" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SEVA_STHALA_FAQ">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUESTION" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ANSWER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SEVA_STHALA_MEDIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MEDIA_HEADER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_TITLE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_TYPE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MEDIA_ATTACHMENT" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SDPModelStoreContainer">
+    <EntitySet Name="EVENT_BANNER" EntityType="Self.EVENT_BANNER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_CALENDAR" EntityType="Self.EVENT_CALENDAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_DAILY" EntityType="Self.EVENT_DAILY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_FLASH" EntityType="Self.EVENT_FLASH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_REGULAR" EntityType="Self.EVENT_REGULAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_SPONSOR" EntityType="Self.EVENT_SPONSOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_UPCOMING" EntityType="Self.EVENT_UPCOMING" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIST_IMAGES" EntityType="Self.LIST_IMAGES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIST_MEDIA" EntityType="Self.LIST_MEDIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIST_QUOTES" EntityType="Self.LIST_QUOTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIST_VIDEOS" EntityType="Self.LIST_VIDEOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOTIFICATION_DEVICES" EntityType="Self.NOTIFICATION_DEVICES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEVA_ANNADANAM_MEDIA" EntityType="Self.SEVA_ANNADANAM_MEDIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEVA_STHALA_FAQ" EntityType="Self.SEVA_STHALA_FAQ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEVA_STHALA_MEDIA" EntityType="Self.SEVA_STHALA_MEDIA" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

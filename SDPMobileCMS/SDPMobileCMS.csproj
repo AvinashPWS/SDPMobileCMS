@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ADDFE46C-7A14-48BF-BE3F-ADE16323CFA4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SDPAdmin</RootNamespace>
+    <AssemblyName>SDPMobileCMS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.16598, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="IMAGES\20140322.jpg" />
+    <Content Include="IMAGES\annapurna.jpg" />
+    <Content Include="IMAGES\april_small.jpg" />
+    <Content Include="IMAGES\aug_small.jpg" />
+    <Content Include="IMAGES\ayyapa-padipuja-1.jpg" />
+    <Content Include="IMAGES\ayyapa-padipuja.jpg" />
+    <Content Include="IMAGES\ayyappa-gl.png" />
+    <Content Include="IMAGES\ayyappa.jpg" />
+    <Content Include="IMAGES\bahtukamma.jpg" />
+    <Content Include="IMAGES\balatripurasundari.jpg" />
+    <Content Include="IMAGES\banner24.png" />
+    <Content Include="IMAGES\bhishma_ekadasi.png" />
+    <Content Include="IMAGES\blood-drive.jpg" />
+    <Content Include="IMAGES\ceremony.jpg" />
+    <Content Include="IMAGES\chinna-jeeyar.jpg" />
+    <Content Include="IMAGES\cover_page.jpg" />
+    <Content Include="IMAGES\cultural.jpg" />
+    <Content Include="IMAGES\datta.png" />
+    <Content Include="IMAGES\dec_small.jpg" />
+    <Content Include="IMAGES\diwali.jpg" />
+    <Content Include="IMAGES\fathersday.jpg" />
+    <Content Include="IMAGES\feb_small.jpg" />
+    <Content Include="IMAGES\festivals.jpg" />
+    <Content Include="IMAGES\gajalakshmi.jpg" />
+    <Content Include="IMAGES\ganesh-abhishekam.jpg" />
+    <Content Include="IMAGES\ganesh-chathurthi.jpg" />
+    <Content Include="IMAGES\ganesh-nimarjan.jpg" />
+    <Content Include="IMAGES\gayatri.jpg" />
+    <Content Include="IMAGES\gouri.jpg" />
+    <Content Include="IMAGES\gurukulam.png" />
+    <Content Include="IMAGES\gurupoornima-1.jpg" />
+    <Content Include="IMAGES\gurupoornima-2.jpg" />
+    <Content Include="IMAGES\hanuman-jayanthi.jpg" />
+    <Content Include="IMAGES\IMG_3357.JPG" />
+    <Content Include="IMAGES\jan_small.jpg" />
+    <Content Include="IMAGES\july_small.jpg" />
+    <Content Include="IMAGES\june_small.jpg" />
+    <Content Include="IMAGES\kanakadurga.jpg" />
+    <Content Include="IMAGES\karthika-somavaram.jpg" />
+    <Content Include="IMAGES\kartika-latest.jpg" />
+    <Content Include="IMAGES\lalitha-sahasra.jpg" />
+    <Content Include="IMAGES\lalithamahayagnam.jpg" />
+    <Content Include="IMAGES\mahashivratri.png" />
+    <Content Include="IMAGES\makara-sankranti1.jpg" />
+    <Content Include="IMAGES\march_small.jpg" />
+    <Content Include="IMAGES\mata-karunamayi.jpg" />
+    <Content Include="IMAGES\may_small.jpg" />
+    <Content Include="IMAGES\meenakshi.jpg" />
+    <Content Include="IMAGES\navami.jpg" />
+    <Content Include="IMAGES\navavarna.jpg" />
+    <Content Include="IMAGES\nov_small.jpg" />
+    <Content Include="IMAGES\oct_small.jpg" />
+    <Content Include="IMAGES\pallakostavam.jpg" />
+    <Content Include="IMAGES\prana-prathistha.jpg" />
+    <Content Include="IMAGES\pratista-evening.jpg" />
+    <Content Include="IMAGES\pratista-event.jpg" />
+    <Content Include="IMAGES\punyathithi.jpg" />
+    <Content Include="IMAGES\rajarejeswari.jpg" />
+    <Content Include="IMAGES\ramanavami.jpg" />
+    <Content Include="IMAGES\rama_chandra.png" />
+    <Content Include="IMAGES\sahasra-lingarchana.png" />
+    <Content Include="IMAGES\sai.png" />
+    <Content Include="IMAGES\samprokshana.jpg" />
+    <Content Include="IMAGES\saraswathi.jpg" />
+    <Content Include="IMAGES\sept_small.jpg" />
+    <Content Include="IMAGES\shirdi-head.jpg" />
+    <Content Include="IMAGES\shivratri.jpg" />
+    <Content Include="IMAGES\shivratri1.jpg" />
+    <Content Include="IMAGES\sthalaseva.png" />
+    <Content Include="IMAGES\swami-paripornananda.jpg" />
+    <Content Include="IMAGES\ugadi-pratishta.jpg" />
+    <Content Include="IMAGES\ugadi-pratishta2.jpg" />
+    <Content Include="IMAGES\ugadi.jpg" />
+    <Content Include="IMAGES\vasantha_panchami.png" />
+    <Content Include="IMAGES\VolunteersMeet.jpg" />
+    <Content Include="IMAGES\yagnam.jpg" />
+    <Content Include="SDPAdmin\Gallery\Audio.aspx" />
+    <Content Include="SDPAdmin\PushNotification.exe" />
+    <Content Include="SDPAdmin\API\SDPMobileService.aspx" />
+    <Content Include="SDPAdmin\appCore\css\app.v1.css" />
+    <Content Include="SDPAdmin\appCore\css\font.css" />
+    <Content Include="SDPAdmin\appCore\css\landing.css" />
+    <Content Include="SDPAdmin\appCore\fonts\fontawesome-webfontba72.svg" />
+    <Content Include="SDPAdmin\appCore\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="SDPAdmin\appCore\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="SDPAdmin\appCore\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="SDPAdmin\appCore\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="SDPAdmin\appCore\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="SDPAdmin\appCore\images\ajax-loader.gif" />
+    <Content Include="SDPAdmin\appCore\images\avatar_default.jpg" />
+    <Content Include="SDPAdmin\appCore\images\logo.png" />
+    <Content Include="SDPAdmin\appCore\js\app.plugin.js" />
+    <Content Include="SDPAdmin\appCore\js\app.v1.js" />
+    <Content Include="SDPAdmin\appCore\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="SDPAdmin\appCore\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="SDPAdmin\appCore\js\landing.js" />
+    <Content Include="SDPAdmin\Calendar\HinduCalendar.aspx" />
+    <Content Include="SDPAdmin\Events\EventBanner.aspx" />
+    <Content Include="SDPAdmin\Events\EventDaily.aspx" />
+    <Content Include="SDPAdmin\Events\EventFlashNews.aspx" />
+    <Content Include="SDPAdmin\Events\EventRegular.aspx" />
+    <Content Include="SDPAdmin\Events\EventSponsors.aspx" />
+    <Content Include="SDPAdmin\Events\EventUpcoming.aspx" />
+    <Content Include="SDPAdmin\Gallery\Images.aspx" />
+    <Content Include="SDPAdmin\Gallery\Quotes.aspx" />
+    <Content Include="SDPAdmin\Gallery\Videos.aspx" />
+    <Content Include="SDPAdmin\Login.aspx" />
+    <Content Include="SDPAdmin\Notifications\SendNotification.aspx" />
+    <Content Include="SDPAdmin\Seva\SevaAnnadamMedia.aspx" />
+    <Content Include="SDPAdmin\Seva\SevaSthalaMedia.aspx" />
+    <Content Include="SDPAdmin\Seva\SevaSthalaFAQ.aspx" />
+    <Content Include="SP\EVENT_BANNER_insert.sql" />
+    <Content Include="SP\EVENT_CALENDAR_insert.sql" />
+    <Content Include="SP\EVENT_DAILY_insert.sql" />
+    <Content Include="SP\EVENT_FLASH_insert.sql" />
+    <Content Include="SP\EVENT_REGULAR_insert.sql" />
+    <Content Include="SP\EVENT_SPONSOR_insert.sql" />
+    <Content Include="SP\EVENT_UPCOMING_insert.sql" />
+    <Content Include="SP\LIST_IMAGES_insert.sql" />
+    <Content Include="SP\LIST_QUOTES_insert.sql" />
+    <Content Include="SP\LIST_VIDEOS_insert.sql" />
+    <Content Include="SP\NOTIFICATION_DEVICES_insert.sql" />
+    <Content Include="SP\SEVA_STHALA_FAQ_insert.sql" />
+    <Content Include="SP\SEVA_STHALA_MEDIA_insert.sql" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Calendar\HinduCalendar.aspx.cs">
+      <DependentUpon>HinduCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Calendar\HinduCalendar.aspx.designer.cs">
+      <DependentUpon>HinduCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventBanner.aspx.cs">
+      <DependentUpon>EventBanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventBanner.aspx.designer.cs">
+      <DependentUpon>EventBanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventDaily.aspx.cs">
+      <DependentUpon>EventDaily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventDaily.aspx.designer.cs">
+      <DependentUpon>EventDaily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventFlashNews.aspx.cs">
+      <DependentUpon>EventFlashNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventFlashNews.aspx.designer.cs">
+      <DependentUpon>EventFlashNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventRegular.aspx.cs">
+      <DependentUpon>EventRegular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventRegular.aspx.designer.cs">
+      <DependentUpon>EventRegular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventSponsors.aspx.cs">
+      <DependentUpon>EventSponsors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventSponsors.aspx.designer.cs">
+      <DependentUpon>EventSponsors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventUpcoming.aspx.cs">
+      <DependentUpon>EventUpcoming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Events\EventUpcoming.aspx.designer.cs">
+      <DependentUpon>EventUpcoming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Gallery\Audio.aspx.cs">
+      <DependentUpon>Audio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Gallery\Audio.aspx.designer.cs">
+      <DependentUpon>Audio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Gallery\Images.aspx.cs">
+      <DependentUpon>Images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Gallery\Images.aspx.designer.cs">
+      <DependentUpon>Images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Gallery\Quotes.aspx.cs">
+      <DependentUpon>Quotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Gallery\Quotes.aspx.designer.cs">
+      <DependentUpon>Quotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Gallery\Videos.aspx.cs">
+      <DependentUpon>Videos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Gallery\Videos.aspx.designer.cs">
+      <DependentUpon>Videos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SDPAdmin\API\SDPMobileService.aspx.cs">
+      <DependentUpon>SDPMobileService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\API\SDPMobileService.aspx.designer.cs">
+      <DependentUpon>SDPMobileService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Notifications\SendNotification.aspx.cs">
+      <DependentUpon>SendNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Notifications\SendNotification.aspx.designer.cs">
+      <DependentUpon>SendNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Seva\SevaAnnadamMedia.aspx.cs">
+      <DependentUpon>SevaAnnadamMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Seva\SevaAnnadamMedia.aspx.designer.cs">
+      <DependentUpon>SevaAnnadamMedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Seva\SevaSthalaMedia.aspx.cs">
+      <DependentUpon>SevaSthalaMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Seva\SevaSthalaMedia.aspx.designer.cs">
+      <DependentUpon>SevaSthalaMedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Seva\SevaSthalaFAQ.aspx.cs">
+      <DependentUpon>SevaSthalaFAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SDPAdmin\Seva\SevaSthalaFAQ.aspx.designer.cs">
+      <DependentUpon>SevaSthalaFAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SDPAdmin\Utility\DBUtility.cs" />
+    <Compile Include="SDPAdmin\Utility\FileUtility.cs" />
+    <Compile Include="SDPAdmin\Utility\ModelUtility.cs" />
+    <Compile Include="SDPModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDPModel.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SDPAdmin\appCore\fonts\fontawesome-webfontba72.eot" />
+    <Content Include="SDPAdmin\appCore\fonts\fontawesome-webfontba72.ttf" />
+    <Content Include="SDPAdmin\appCore\fonts\fontawesome-webfontba72.woff" />
+    <Content Include="SDPAdmin\appCore\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="SDPAdmin\appCore\fonts\opensans\opensans-bold-webfont.woff" />
+    <Content Include="SDPAdmin\appCore\fonts\opensans\opensans-light-webfont.woff" />
+    <Content Include="SDPAdmin\appCore\fonts\opensans\opensans-webfont.woff" />
+    <None Include="Properties\PublishProfiles\RELEASE.pubxml" />
+    <EntityDeploy Include="SDPModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SDPModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="SDPModel.edmx.diagram">
+      <DependentUpon>SDPModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SDPAdmin\appData\EVENTS\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64046</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64046/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

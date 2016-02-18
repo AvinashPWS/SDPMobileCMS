@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="saidattapeethamModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredPath" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredRoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="CompatibleSchemaVersion" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredUserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" Nullable="false" />
+    <Property Name="EventType" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="EventSequence" Type="decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventOccurrence" Type="decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="EventDetailCode" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+    <Property Name="Details" Type="ntext" />
+  </EntityType>
+  <EntityType Name="EVENT_BANNER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="EVENT_TARGET_TYPE" Type="nvarchar(max)" />
+    <Property Name="EVENT_TARGET" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'saidattapeetham.dbo.EVENT_CALENDAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EVENT_CALENDAR">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="EVENT_NAME" />
+      <PropertyRef Name="DATETIME" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_DAILY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_FLASH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_REGULAR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_SPONSOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_UPCOMING">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVENT_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="nvarchar(max)" />
+    <Property Name="EVENT_INFO" Type="nvarchar(max)" />
+    <Property Name="EVENT_ATTACHMENT" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_IMAGES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IMAGE_HEADER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IMAGE_TITLE" Type="nvarchar(max)" />
+    <Property Name="IMAGE_ATTACHMENT" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IMAGE_TARGET" Type="nvarchar(max)" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_QUOTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUOTE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_VIDEOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VIDEO_HEADER" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VIDEO_TITLE" Type="nvarchar(max)" />
+    <Property Name="VIDEO_URL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NOTIFICATION_DEVICES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DEVICE_ID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DEVICE_TYPE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ROLE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATETIME" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblBanner">
+    <Key>
+      <PropertyRef Name="BannerID" />
+    </Key>
+    <Property Name="BannerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BennerText" Type="varchar(max)" Nullable="false" />
+    <Property Name="UploadFileName" Type="varchar" MaxLength="50" />
+    <Property Name="UploadDate" Type="datetime" Nullable="false" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="ImageName" Type="varchar" MaxLength="50" />
+    <Property Name="FlayerName" Type="varchar" MaxLength="50" />
+    <Property Name="FlayerLink" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblCareerDetails">
+    <Key>
+      <PropertyRef Name="careerDetailsID" />
+    </Key>
+    <Property Name="careerDetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CareerID" Type="int" />
+    <Property Name="Req_Type" Type="char" MaxLength="2" />
+    <Property Name="Description" Type="varchar" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="tblCareers">
+    <Key>
+      <PropertyRef Name="CareerID" />
+    </Key>
+    <Property Name="CareerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PositionName" Type="varchar" MaxLength="100" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdtedOn" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="tblDonationMaster">
+    <Key>
+      <PropertyRef Name="Donation_ID" />
+    </Key>
+    <Property Name="Donation_ID" Type="int" Nullable="false" />
+    <Property Name="Donation_Code" Type="varchar" MaxLength="25" />
+    <Property Name="Donation_Name" Type="varchar" MaxLength="100" />
+    <Property Name="Donation_Type" Type="char" MaxLength="1" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'saidattapeetham.dbo.tblEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblEvents">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="IsActive" />
+    </Key>
+    <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventDate" Type="datetime" />
+    <Property Name="Event" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="EventTime" Type="varchar" MaxLength="50" />
+    <Property Name="EventToDate" Type="datetime" />
+    <Property Name="EventToTime" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'saidattapeetham.dbo.tblFlashNews' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblFlashNews">
+    <Key>
+      <PropertyRef Name="FlashNewsID" />
+      <PropertyRef Name="FlashNews" />
+      <PropertyRef Name="IsActive" />
+    </Key>
+    <Property Name="FlashNewsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlashNews" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblNews">
+    <Key>
+      <PropertyRef Name="NewsID" />
+    </Key>
+    <Property Name="NewsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewsImageName" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="2000" />
+    <Property Name="UploadedBy" Type="int" Nullable="false" />
+    <Property Name="UploadedDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="tblPaidMembers">
+    <Key>
+      <PropertyRef Name="SNO" />
+    </Key>
+    <Property Name="PaymentID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+    <Property Name="SNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DONATION_ID" Type="int" />
+    <Property Name="Gothram" Type="varchar" MaxLength="100" />
+    <Property Name="Nakshatram" Type="varchar" MaxLength="100" />
+    <Property Name="DATE_ON" Type="date" />
+  </EntityType>
+  <EntityType Name="tblPaymentDetails">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="PaymentDate" Type="smalldatetime" />
+    <Property Name="AmountPaid" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'saidattapeetham.dbo.tblPhotoGallery' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblPhotoGallery">
+    <Key>
+      <PropertyRef Name="PhotoGalleryID" />
+      <PropertyRef Name="HeaderText" />
+      <PropertyRef Name="GalleryLink" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="ImageLink" />
+    </Key>
+    <Property Name="PhotoGalleryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HeaderText" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GalleryLink" Type="varchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="ImageLink" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPosition">
+    <Key>
+      <PropertyRef Name="positionID" />
+    </Key>
+    <Property Name="positionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ImageName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblRSS">
+    <Key>
+      <PropertyRef Name="RSSID" />
+    </Key>
+    <Property Name="RSSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RSS_Title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RSS_Desc" Type="varchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UploadedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="Weburl" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUsers">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__276EDEB3">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__286302EC">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__59063A47">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__5EBF139D">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="Self.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__628FA481">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__6383C8BA">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__3C69FB99">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="Self.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__45F365D3">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__173876EA">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__4AB81AF0">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__UserI__49C3F6B7">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblPaidMe__Payme__02084FDA">
+    <End Role="tblPaymentDetails" Type="Self.tblPaymentDetails" Multiplicity="1" />
+    <End Role="tblPaidMembers" Type="Self.tblPaidMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPaymentDetails">
+        <PropertyRef Name="PaymentID" />
+      </Principal>
+      <Dependent Role="tblPaidMembers">
+        <PropertyRef Name="PaymentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCareerDetails_tblCareers">
+    <End Role="tblCareers" Type="Self.tblCareers" Multiplicity="0..1" />
+    <End Role="tblCareerDetails" Type="Self.tblCareerDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCareers">
+        <PropertyRef Name="CareerID" />
+      </Principal>
+      <Dependent Role="tblCareerDetails">
+        <PropertyRef Name="CareerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCareers_tblUsers">
+    <End Role="tblUsers" Type="Self.tblUsers" Multiplicity="0..1" />
+    <End Role="tblCareers" Type="Self.tblCareers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUsers">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="tblCareers">
+        <PropertyRef Name="UpdatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblNews_tblUsers">
+    <End Role="tblUsers" Type="Self.tblUsers" Multiplicity="1" />
+    <End Role="tblNews" Type="Self.tblNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUsers">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="tblNews">
+        <PropertyRef Name="UploadedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="saidattapeethamModelStoreContainer">
+    <EntitySet Name="aspnet_Applications" EntityType="Self.aspnet_Applications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Membership" EntityType="Self.aspnet_Membership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Paths" EntityType="Self.aspnet_Paths" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="Self.aspnet_PersonalizationAllUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="Self.aspnet_PersonalizationPerUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Profile" EntityType="Self.aspnet_Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Roles" EntityType="Self.aspnet_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="Self.aspnet_SchemaVersions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Users" EntityType="Self.aspnet_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="Self.aspnet_WebEvent_Events" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_BANNER" EntityType="Self.EVENT_BANNER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_DAILY" EntityType="Self.EVENT_DAILY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_FLASH" EntityType="Self.EVENT_FLASH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_REGULAR" EntityType="Self.EVENT_REGULAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_SPONSOR" EntityType="Self.EVENT_SPONSOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_UPCOMING" EntityType="Self.EVENT_UPCOMING" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIST_IMAGES" EntityType="Self.LIST_IMAGES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIST_QUOTES" EntityType="Self.LIST_QUOTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIST_VIDEOS" EntityType="Self.LIST_VIDEOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOTIFICATION_DEVICES" EntityType="Self.NOTIFICATION_DEVICES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBanner" EntityType="Self.tblBanner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCareerDetails" EntityType="Self.tblCareerDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCareers" EntityType="Self.tblCareers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDonationMaster" EntityType="Self.tblDonationMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNews" EntityType="Self.tblNews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPaidMembers" EntityType="Self.tblPaidMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPaymentDetails" EntityType="Self.tblPaymentDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPosition" EntityType="Self.tblPosition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRSS" EntityType="Self.tblRSS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EVENT_CALENDAR" EntityType="Self.EVENT_CALENDAR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[EVENT_CALENDAR].[ID] AS [ID], 
+[EVENT_CALENDAR].[EVENT_NAME] AS [EVENT_NAME], 
+[EVENT_CALENDAR].[EVENT_ATTACHMENT] AS [EVENT_ATTACHMENT], 
+[EVENT_CALENDAR].[DATETIME] AS [DATETIME]
+FROM [dbo].[EVENT_CALENDAR] AS [EVENT_CALENDAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblEvents" EntityType="Self.tblEvents" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblEvents].[EventID] AS [EventID], 
+[tblEvents].[EventDate] AS [EventDate], 
+[tblEvents].[Event] AS [Event], 
+[tblEvents].[IsActive] AS [IsActive], 
+[tblEvents].[EventTime] AS [EventTime], 
+[tblEvents].[EventToDate] AS [EventToDate], 
+[tblEvents].[EventToTime] AS [EventToTime]
+FROM [dbo].[tblEvents] AS [tblEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblFlashNews" EntityType="Self.tblFlashNews" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblFlashNews].[FlashNewsID] AS [FlashNewsID], 
+[tblFlashNews].[FlashNews] AS [FlashNews], 
+[tblFlashNews].[IsActive] AS [IsActive]
+FROM [dbo].[tblFlashNews] AS [tblFlashNews]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblPhotoGallery" EntityType="Self.tblPhotoGallery" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblPhotoGallery].[PhotoGalleryID] AS [PhotoGalleryID], 
+[tblPhotoGallery].[HeaderText] AS [HeaderText], 
+[tblPhotoGallery].[GalleryLink] AS [GalleryLink], 
+[tblPhotoGallery].[IsActive] AS [IsActive], 
+[tblPhotoGallery].[ImageLink] AS [ImageLink]
+FROM [dbo].[tblPhotoGallery] AS [tblPhotoGallery]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__aspnet_Me__Appli__276EDEB3" Association="Self.FK__aspnet_Me__Appli__276EDEB3">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__286302EC" Association="Self.FK__aspnet_Me__UserI__286302EC">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__59063A47" Association="Self.FK__aspnet_Pa__Appli__59063A47">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__5EBF139D" Association="Self.FK__aspnet_Pe__PathI__5EBF139D">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__628FA481" Association="Self.FK__aspnet_Pe__PathI__628FA481">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__6383C8BA" Association="Self.FK__aspnet_Pe__UserI__6383C8BA">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__3C69FB99" Association="Self.FK__aspnet_Pr__UserI__3C69FB99">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__45F365D3" Association="Self.FK__aspnet_Ro__Appli__45F365D3">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__173876EA" Association="Self.FK__aspnet_Us__Appli__173876EA">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__4AB81AF0" Association="Self.FK__aspnet_Us__RoleI__4AB81AF0">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__49C3F6B7" Association="Self.FK__aspnet_Us__UserI__49C3F6B7">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblPaidMe__Payme__02084FDA" Association="Self.FK__tblPaidMe__Payme__02084FDA">
+      <End Role="tblPaymentDetails" EntitySet="tblPaymentDetails" />
+      <End Role="tblPaidMembers" EntitySet="tblPaidMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCareerDetails_tblCareers" Association="Self.FK_tblCareerDetails_tblCareers">
+      <End Role="tblCareers" EntitySet="tblCareers" />
+      <End Role="tblCareerDetails" EntitySet="tblCareerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCareers_tblUsers" Association="Self.FK_tblCareers_tblUsers">
+      <End Role="tblUsers" EntitySet="tblUsers" />
+      <End Role="tblCareers" EntitySet="tblCareers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblNews_tblUsers" Association="Self.FK_tblNews_tblUsers">
+      <End Role="tblUsers" EntitySet="tblUsers" />
+      <End Role="tblNews" EntitySet="tblNews" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

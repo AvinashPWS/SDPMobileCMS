@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SDPModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityType Name="EVENT_BANNER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENT_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_ATTACHMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_TARGET_TYPE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_TARGET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_DAILY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENT_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_ATTACHMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_FLASH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENT_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_ATTACHMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_REGULAR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENT_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_ATTACHMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_SPONSOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENT_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_ATTACHMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_UPCOMING">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENT_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EVENT_DATETIME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_ATTACHMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_IMAGES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IMAGE_HEADER" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IMAGE_TITLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IMAGE_ATTACHMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IMAGE_TARGET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_QUOTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QUOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIST_VIDEOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VIDEO_HEADER" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VIDEO_TITLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VIDEO_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NOTIFICATION_DEVICES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DEVICE_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DEVICE_TYPE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ROLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SEVA_STHALA_FAQ">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="QUESTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ANSWER" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DATETIME" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="SDPEntities">
+    <EntitySet Name="EVENT_BANNER" EntityType="Self.EVENT_BANNER" />
+    <EntitySet Name="EVENT_DAILY" EntityType="Self.EVENT_DAILY" />
+    <EntitySet Name="EVENT_FLASH" EntityType="Self.EVENT_FLASH" />
+    <EntitySet Name="EVENT_REGULAR" EntityType="Self.EVENT_REGULAR" />
+    <EntitySet Name="EVENT_SPONSOR" EntityType="Self.EVENT_SPONSOR" />
+    <EntitySet Name="EVENT_UPCOMING" EntityType="Self.EVENT_UPCOMING" />
+    <EntitySet Name="LIST_IMAGES" EntityType="Self.LIST_IMAGES" />
+    <EntitySet Name="LIST_QUOTES" EntityType="Self.LIST_QUOTES" />
+    <EntitySet Name="LIST_VIDEOS" EntityType="Self.LIST_VIDEOS" />
+    <EntitySet Name="NOTIFICATION_DEVICES" EntityType="Self.NOTIFICATION_DEVICES" />
+    <EntitySet Name="SEVA_STHALA_FAQ" EntityType="Self.SEVA_STHALA_FAQ" />
+    <EntitySet Name="LIST_MEDIA" EntityType="SDPModel.LIST_MEDIA" />
+    <EntitySet Name="SEVA_STHALA_MEDIA" EntityType="SDPModel.SEVA_STHALA_MEDIA" />
+    <EntitySet Name="SEVA_ANNADANAM_MEDIA" EntityType="SDPModel.SEVA_ANNADANAM_MEDIA" />
+    <EntitySet Name="EVENT_CALENDAR" EntityType="SDPModel.EVENT_CALENDAR" />
+  </EntityContainer>
+  <EntityType Name="LIST_MEDIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MEDIA_HEADER" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_TITLE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_TYPE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_ATTACHMENT" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SEVA_STHALA_MEDIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MEDIA_HEADER" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_TITLE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_TYPE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_ATTACHMENT" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SEVA_ANNADANAM_MEDIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MEDIA_HEADER" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_TITLE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_TYPE" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MEDIA_ATTACHMENT" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EVENT_CALENDAR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENT_NAME" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_ATTACHMENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EVENT_TARGET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DATETIME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

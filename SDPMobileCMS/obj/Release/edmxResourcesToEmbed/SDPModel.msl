@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="SDPModelStoreContainer" CdmEntityContainer="SDPEntities">
+    <EntitySetMapping Name="EVENT_BANNER">
+      <EntityTypeMapping TypeName="SDPModel.EVENT_BANNER">
+        <MappingFragment StoreEntitySet="EVENT_BANNER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="EVENT_TARGET_TYPE" ColumnName="EVENT_TARGET_TYPE" />
+          <ScalarProperty Name="EVENT_TARGET" ColumnName="EVENT_TARGET" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_CALENDAR">
+      <EntityTypeMapping TypeName="SDPModel.EVENT_CALENDAR">
+        <MappingFragment StoreEntitySet="EVENT_CALENDAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="EVENT_TARGET" ColumnName="EVENT_TARGET" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_DAILY">
+      <EntityTypeMapping TypeName="SDPModel.EVENT_DAILY">
+        <MappingFragment StoreEntitySet="EVENT_DAILY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_FLASH">
+      <EntityTypeMapping TypeName="SDPModel.EVENT_FLASH">
+        <MappingFragment StoreEntitySet="EVENT_FLASH">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_REGULAR">
+      <EntityTypeMapping TypeName="SDPModel.EVENT_REGULAR">
+        <MappingFragment StoreEntitySet="EVENT_REGULAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_SPONSOR">
+      <EntityTypeMapping TypeName="SDPModel.EVENT_SPONSOR">
+        <MappingFragment StoreEntitySet="EVENT_SPONSOR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_UPCOMING">
+      <EntityTypeMapping TypeName="SDPModel.EVENT_UPCOMING">
+        <MappingFragment StoreEntitySet="EVENT_UPCOMING">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIST_IMAGES">
+      <EntityTypeMapping TypeName="SDPModel.LIST_IMAGES">
+        <MappingFragment StoreEntitySet="LIST_IMAGES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IMAGE_HEADER" ColumnName="IMAGE_HEADER" />
+          <ScalarProperty Name="IMAGE_TITLE" ColumnName="IMAGE_TITLE" />
+          <ScalarProperty Name="IMAGE_ATTACHMENT" ColumnName="IMAGE_ATTACHMENT" />
+          <ScalarProperty Name="IMAGE_TARGET" ColumnName="IMAGE_TARGET" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIST_MEDIA">
+      <EntityTypeMapping TypeName="SDPModel.LIST_MEDIA">
+        <MappingFragment StoreEntitySet="LIST_MEDIA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MEDIA_HEADER" ColumnName="MEDIA_HEADER" />
+          <ScalarProperty Name="MEDIA_TITLE" ColumnName="MEDIA_TITLE" />
+          <ScalarProperty Name="MEDIA_TYPE" ColumnName="MEDIA_TYPE" />
+          <ScalarProperty Name="MEDIA_ATTACHMENT" ColumnName="MEDIA_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIST_QUOTES">
+      <EntityTypeMapping TypeName="SDPModel.LIST_QUOTES">
+        <MappingFragment StoreEntitySet="LIST_QUOTES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIST_VIDEOS">
+      <EntityTypeMapping TypeName="SDPModel.LIST_VIDEOS">
+        <MappingFragment StoreEntitySet="LIST_VIDEOS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="VIDEO_HEADER" ColumnName="VIDEO_HEADER" />
+          <ScalarProperty Name="VIDEO_TITLE" ColumnName="VIDEO_TITLE" />
+          <ScalarProperty Name="VIDEO_URL" ColumnName="VIDEO_URL" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEVA_ANNADANAM_MEDIA">
+      <EntityTypeMapping TypeName="SDPModel.SEVA_ANNADANAM_MEDIA">
+        <MappingFragment StoreEntitySet="SEVA_ANNADANAM_MEDIA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MEDIA_HEADER" ColumnName="MEDIA_HEADER" />
+          <ScalarProperty Name="MEDIA_TITLE" ColumnName="MEDIA_TITLE" />
+          <ScalarProperty Name="MEDIA_TYPE" ColumnName="MEDIA_TYPE" />
+          <ScalarProperty Name="MEDIA_ATTACHMENT" ColumnName="MEDIA_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEVA_STHALA_FAQ">
+      <EntityTypeMapping TypeName="SDPModel.SEVA_STHALA_FAQ">
+        <MappingFragment StoreEntitySet="SEVA_STHALA_FAQ">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QUESTION" ColumnName="QUESTION" />
+          <ScalarProperty Name="ANSWER" ColumnName="ANSWER" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEVA_STHALA_MEDIA">
+      <EntityTypeMapping TypeName="SDPModel.SEVA_STHALA_MEDIA">
+        <MappingFragment StoreEntitySet="SEVA_STHALA_MEDIA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MEDIA_HEADER" ColumnName="MEDIA_HEADER" />
+          <ScalarProperty Name="MEDIA_TITLE" ColumnName="MEDIA_TITLE" />
+          <ScalarProperty Name="MEDIA_TYPE" ColumnName="MEDIA_TYPE" />
+          <ScalarProperty Name="MEDIA_ATTACHMENT" ColumnName="MEDIA_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIST_AUDIO">
+      <EntityTypeMapping TypeName="SDPModel.LIST_AUDIO">
+        <MappingFragment StoreEntitySet="LIST_AUDIO">
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+          <ScalarProperty Name="AUDIO_ATTACHMENT" ColumnName="AUDIO_ATTACHMENT" />
+          <ScalarProperty Name="AUDIO_TITLE" ColumnName="AUDIO_TITLE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTIFICATION_DEVICES">
+      <EntityTypeMapping TypeName="SDPModel.NOTIFICATION_DEVICES">
+        <MappingFragment StoreEntitySet="NOTIFICATION_DEVICES">
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+          <ScalarProperty Name="DEVICE_TYPE" ColumnName="DEVICE_TYPE" />
+          <ScalarProperty Name="DEVICE_ID" ColumnName="DEVICE_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

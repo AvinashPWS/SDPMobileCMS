@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="saidattapeethamModelStoreContainer" CdmEntityContainer="SDPEntities">
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_Applications">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_Membership">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_Paths">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_PersonalizationAllUsers">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_PersonalizationPerUser">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_Profile">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_Roles">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_SchemaVersions">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_Users">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="saidattapeethamModel.aspnet_WebEvent_Events">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_BANNER">
+      <EntityTypeMapping TypeName="saidattapeethamModel.EVENT_BANNER">
+        <MappingFragment StoreEntitySet="EVENT_BANNER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="EVENT_TARGET_TYPE" ColumnName="EVENT_TARGET_TYPE" />
+          <ScalarProperty Name="EVENT_TARGET" ColumnName="EVENT_TARGET" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_DAILY">
+      <EntityTypeMapping TypeName="saidattapeethamModel.EVENT_DAILY">
+        <MappingFragment StoreEntitySet="EVENT_DAILY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_FLASH">
+      <EntityTypeMapping TypeName="saidattapeethamModel.EVENT_FLASH">
+        <MappingFragment StoreEntitySet="EVENT_FLASH">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_REGULAR">
+      <EntityTypeMapping TypeName="saidattapeethamModel.EVENT_REGULAR">
+        <MappingFragment StoreEntitySet="EVENT_REGULAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_SPONSOR">
+      <EntityTypeMapping TypeName="saidattapeethamModel.EVENT_SPONSOR">
+        <MappingFragment StoreEntitySet="EVENT_SPONSOR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_UPCOMING">
+      <EntityTypeMapping TypeName="saidattapeethamModel.EVENT_UPCOMING">
+        <MappingFragment StoreEntitySet="EVENT_UPCOMING">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_DATETIME" ColumnName="EVENT_DATETIME" />
+          <ScalarProperty Name="EVENT_INFO" ColumnName="EVENT_INFO" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIST_IMAGES">
+      <EntityTypeMapping TypeName="saidattapeethamModel.LIST_IMAGES">
+        <MappingFragment StoreEntitySet="LIST_IMAGES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IMAGE_HEADER" ColumnName="IMAGE_HEADER" />
+          <ScalarProperty Name="IMAGE_TITLE" ColumnName="IMAGE_TITLE" />
+          <ScalarProperty Name="IMAGE_ATTACHMENT" ColumnName="IMAGE_ATTACHMENT" />
+          <ScalarProperty Name="IMAGE_TARGET" ColumnName="IMAGE_TARGET" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIST_QUOTES">
+      <EntityTypeMapping TypeName="saidattapeethamModel.LIST_QUOTES">
+        <MappingFragment StoreEntitySet="LIST_QUOTES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QUOTE" ColumnName="QUOTE" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIST_VIDEOS">
+      <EntityTypeMapping TypeName="saidattapeethamModel.LIST_VIDEOS">
+        <MappingFragment StoreEntitySet="LIST_VIDEOS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="VIDEO_HEADER" ColumnName="VIDEO_HEADER" />
+          <ScalarProperty Name="VIDEO_TITLE" ColumnName="VIDEO_TITLE" />
+          <ScalarProperty Name="VIDEO_URL" ColumnName="VIDEO_URL" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTIFICATION_DEVICES">
+      <EntityTypeMapping TypeName="saidattapeethamModel.NOTIFICATION_DEVICES">
+        <MappingFragment StoreEntitySet="NOTIFICATION_DEVICES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DEVICE_ID" ColumnName="DEVICE_ID" />
+          <ScalarProperty Name="DEVICE_TYPE" ColumnName="DEVICE_TYPE" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBanners">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblBanner">
+        <MappingFragment StoreEntitySet="tblBanner">
+          <ScalarProperty Name="BannerID" ColumnName="BannerID" />
+          <ScalarProperty Name="BennerText" ColumnName="BennerText" />
+          <ScalarProperty Name="UploadFileName" ColumnName="UploadFileName" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="FlayerName" ColumnName="FlayerName" />
+          <ScalarProperty Name="FlayerLink" ColumnName="FlayerLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCareerDetails">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblCareerDetail">
+        <MappingFragment StoreEntitySet="tblCareerDetails">
+          <ScalarProperty Name="careerDetailsID" ColumnName="careerDetailsID" />
+          <ScalarProperty Name="Req_Type" ColumnName="Req_Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCareers">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblCareer">
+        <MappingFragment StoreEntitySet="tblCareers">
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+          <ScalarProperty Name="UpdtedOn" ColumnName="UpdtedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDonationMasters">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblDonationMaster">
+        <MappingFragment StoreEntitySet="tblDonationMaster">
+          <ScalarProperty Name="Donation_ID" ColumnName="Donation_ID" />
+          <ScalarProperty Name="Donation_Code" ColumnName="Donation_Code" />
+          <ScalarProperty Name="Donation_Name" ColumnName="Donation_Name" />
+          <ScalarProperty Name="Donation_Type" ColumnName="Donation_Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNews">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblNew">
+        <MappingFragment StoreEntitySet="tblNews">
+          <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+          <ScalarProperty Name="NewsImageName" ColumnName="NewsImageName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPaidMembers">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblPaidMember">
+        <MappingFragment StoreEntitySet="tblPaidMembers">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="SNO" ColumnName="SNO" />
+          <ScalarProperty Name="DONATION_ID" ColumnName="DONATION_ID" />
+          <ScalarProperty Name="Gothram" ColumnName="Gothram" />
+          <ScalarProperty Name="Nakshatram" ColumnName="Nakshatram" />
+          <ScalarProperty Name="DATE_ON" ColumnName="DATE_ON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPaymentDetails">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblPaymentDetail">
+        <MappingFragment StoreEntitySet="tblPaymentDetails">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="AmountPaid" ColumnName="AmountPaid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPositions">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblPosition">
+        <MappingFragment StoreEntitySet="tblPosition">
+          <ScalarProperty Name="positionID" ColumnName="positionID" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRSSes">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblRSS">
+        <MappingFragment StoreEntitySet="tblRSS">
+          <ScalarProperty Name="RSSID" ColumnName="RSSID" />
+          <ScalarProperty Name="RSS_Title" ColumnName="RSS_Title" />
+          <ScalarProperty Name="RSS_Desc" ColumnName="RSS_Desc" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="Weburl" ColumnName="Weburl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_CALENDAR">
+      <EntityTypeMapping TypeName="saidattapeethamModel.EVENT_CALENDAR">
+        <MappingFragment StoreEntitySet="EVENT_CALENDAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
+          <ScalarProperty Name="EVENT_ATTACHMENT" ColumnName="EVENT_ATTACHMENT" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEvents">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblEvent">
+        <MappingFragment StoreEntitySet="tblEvents">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventToDate" ColumnName="EventToDate" />
+          <ScalarProperty Name="EventToTime" ColumnName="EventToTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFlashNews">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblFlashNew">
+        <MappingFragment StoreEntitySet="tblFlashNews">
+          <ScalarProperty Name="FlashNewsID" ColumnName="FlashNewsID" />
+          <ScalarProperty Name="FlashNews" ColumnName="FlashNews" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPhotoGalleries">
+      <EntityTypeMapping TypeName="saidattapeethamModel.tblPhotoGallery">
+        <MappingFragment StoreEntitySet="tblPhotoGallery">
+          <ScalarProperty Name="PhotoGalleryID" ColumnName="PhotoGalleryID" />
+          <ScalarProperty Name="HeaderText" ColumnName="HeaderText" />
+          <ScalarProperty Name="GalleryLink" ColumnName="GalleryLink" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ImageLink" ColumnName="ImageLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Me__Appli__276EDEB3" TypeName="saidattapeethamModel.FK__aspnet_Me__Appli__276EDEB3" StoreEntitySet="aspnet_Membership">
+      <EndProperty Name="aspnet_Applications">
+        <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Membership">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Pa__Appli__59063A47" TypeName="saidattapeethamModel.FK__aspnet_Pa__Appli__59063A47" StoreEntitySet="aspnet_Paths">
+      <EndProperty Name="aspnet_Applications">
+        <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Paths">
+        <ScalarProperty Name="PathId" ColumnName="PathId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Ro__Appli__45F365D3" TypeName="saidattapeethamModel.FK__aspnet_Ro__Appli__45F365D3" StoreEntitySet="aspnet_Roles">
+      <EndProperty Name="aspnet_Applications">
+        <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Us__Appli__173876EA" TypeName="saidattapeethamModel.FK__aspnet_Us__Appli__173876EA" StoreEntitySet="aspnet_Users">
+      <EndProperty Name="aspnet_Applications">
+        <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Me__UserI__286302EC" TypeName="saidattapeethamModel.FK__aspnet_Me__UserI__286302EC" StoreEntitySet="aspnet_Membership">
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Membership">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Pe__PathI__5EBF139D" TypeName="saidattapeethamModel.FK__aspnet_Pe__PathI__5EBF139D" StoreEntitySet="aspnet_PersonalizationAllUsers">
+      <EndProperty Name="aspnet_Paths">
+        <ScalarProperty Name="PathId" ColumnName="PathId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_PersonalizationAllUsers">
+        <ScalarProperty Name="PathId" ColumnName="PathId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Pe__PathI__628FA481" TypeName="saidattapeethamModel.FK__aspnet_Pe__PathI__628FA481" StoreEntitySet="aspnet_PersonalizationPerUser">
+      <EndProperty Name="aspnet_Paths">
+        <ScalarProperty Name="PathId" ColumnName="PathId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_PersonalizationPerUser">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="PathId" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Pe__UserI__6383C8BA" TypeName="saidattapeethamModel.FK__aspnet_Pe__UserI__6383C8BA" StoreEntitySet="aspnet_PersonalizationPerUser">
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_PersonalizationPerUser">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="UserId" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__aspnet_Pr__UserI__3C69FB99" TypeName="saidattapeethamModel.FK__aspnet_Pr__UserI__3C69FB99" StoreEntitySet="aspnet_Profile">
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Profile">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_tblCareerDetails_tblCareers" TypeName="saidattapeethamModel.FK_tblCareerDetails_tblCareers" StoreEntitySet="tblCareerDetails">
+      <EndProperty Name="tblCareers">
+        <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+      </EndProperty>
+      <EndProperty Name="tblCareerDetails">
+        <ScalarProperty Name="careerDetailsID" ColumnName="careerDetailsID" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="CareerID" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_tblCareers_tblUsers" TypeName="saidattapeethamModel.FK_tblCareers_tblUsers" StoreEntitySet="tblCareers">
+      <EndProperty Name="tblUsers">
+        <ScalarProperty Name="UserID" ColumnName="UpdatedBy" />
+      </EndProperty>
+      <EndProperty Name="tblCareers">
+        <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="UpdatedBy" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_tblNews_tblUsers" TypeName="saidattapeethamModel.FK_tblNews_tblUsers" StoreEntitySet="tblNews">
+      <EndProperty Name="tblUsers">
+        <ScalarProperty Name="UserID" ColumnName="UploadedBy" />
+      </EndProperty>
+      <EndProperty Name="tblNews">
+        <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__tblPaidMe__Payme__02084FDA" TypeName="saidattapeethamModel.FK__tblPaidMe__Payme__02084FDA" StoreEntitySet="tblPaidMembers">
+      <EndProperty Name="tblPaymentDetails">
+        <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+      </EndProperty>
+      <EndProperty Name="tblPaidMembers">
+        <ScalarProperty Name="SNO" ColumnName="SNO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="saidattapeethamModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+      <EndProperty Name="aspnet_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
