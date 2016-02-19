@@ -14,3 +14,10 @@ C:\Users\anara\documents\visual studio 2013\Projects\SDPMobileCMS\PushNotificati
 C:\Users\anara\documents\visual studio 2013\Projects\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.exe
 C:\Users\anara\documents\visual studio 2013\Projects\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.pdb
 C:\Users\anara\Documents\Visual Studio 2013\Projects\SDPMobileCMS\PushNotification\PushNotification\bin\Debug\PushNotification.exe.config
+C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.csproj.App.config
+C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.csprojResolveAssemblyReference.cache
+C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.Properties.Resources.resources
+C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.Push.resources
+C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.csproj.GenerateResource.Cache
+C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.exe
+C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.pdb
