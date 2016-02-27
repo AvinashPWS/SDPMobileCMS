@@ -1,5 +1,5 @@
 ﻿using PushSharp;
-using PushSharp.Android;
+using PushSharp.Google;
 using PushSharp.Apple;
 using PushSharp.Core;
 using System;
@@ -13,15 +13,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace PushNotification
 {
+    public class AppPushBrokers
+    {
+        public ApnsServiceBroker Apns { get; set; }
+        public GcmServiceBroker Gcm { get; set; }
+    }
+
+
+
     public partial class Push : Form
     {
         public Push()
         {
             InitializeComponent();
         }
+
+
 
         private void SendButton_Click(object sender, EventArgs e)
         {
@@ -36,125 +47,229 @@ namespace PushNotification
         }
 
 
-        public void SendNotifications1()
-        {
-
-            //create the puchbroker object
-            var push = new PushBroker();
-            //Wire up the events for all the services that the broker registers
-            push.OnNotificationSent += NotificationSent;
-            push.OnChannelException += ChannelException;
-            push.OnServiceException += ServiceException;
-            push.OnNotificationFailed += NotificationFailed;
-            push.OnDeviceSubscriptionExpired += DeviceSubscriptionExpired;
-            push.OnDeviceSubscriptionChanged += DeviceSubscriptionChanged;
-            push.OnChannelCreated += ChannelCreated;
-            push.OnChannelDestroyed += ChannelDestroyed;
-
-            var appleCert = Properties.Resources.SDP_CERTIFICATE_DEV;
-
-            push.RegisterAppleService(new ApplePushChannelSettings(false, appleCert, ""));
-
-            push.QueueNotification(new AppleNotification()
-                                                   .ForDeviceToken(Convert.ToString("0c0358b79810c6385b267771d0783be46f76be2e5ec168ad668083cafd744814"))
-                                                   .WithAlert(MessageTexBox.Text.Trim())
-                                                   .WithBadge(1));
-
-            push.RegisterGcmService(new GcmPushChannelSettings(Properties.Resources.GoogleAPIKey));
-
-            //push.QueueNotification(new GcmNotification().ForDeviceRegistrationId("c9A3f-rBjyM:APA91bHhSAXzmkefLiC_XAwKQC8jed33kkidipiQNRvt0nNS9kojA3NJqvt1iU-B044olFsHLjvSsPE7KcmO5cWX5JZ3Uzh4zWvGXduIy7HFOJ_b9bgQ7tHxiGTXm3N0rKroCbka7pd1")
-            //.WithJson("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"http://saidattanj.org/images/banner24.png\"}"));
-
-            //push.QueueNotification(new GcmNotification().ForDeviceRegistrationId("eX8Flff7ECI:APA91bE1jNAz3DD1LpILJ-_o_w9oCuHEwWXfYpA0nkL6tEdJZVOSvjwQoRQs0wqL8bDRnKoHj-jN0cRrHXRfho-Pp9qh2lLFuc9Xq97pK_3JxXDYqDFSLpwSlO-fL8KCEMyQZQeQ78ft")
-            //.WithJson("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"http://saidattanj.org/images/banner24.png\"}"));
-
-
-            //push.QueueNotification(new GcmNotification().ForDeviceRegistrationId("cbEB0vhQOeE:APA91bHTnLEgbWMhjwrI-KYfDu7KD8bQnvq46p01kzsK-FuPBnFsbsdtWcLkCC3pbsYVB_zObcdHu6VtOYKGNLGwOQwNuS_fKSCjXpGi0BlUDUe9Eimoq8ngsh-adxjw8aa_iJ_RtMW-")
-            //.WithJson("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"http://saidattanj.org/images/banner24.png\"}"));
-
-
-            push.StopAllServices(waitForQueuesToFinish: true);
-
-            MessageBox.Show("Push Notifications sent successfully!!!");
-        }
-
         public void SendNotifications()
         {
+            var appleCert = Properties.Resources.SDP_CERTIFICATE_PROD;
 
-            //create the puchbroker object
-            var push = new PushBroker();
-            //Wire up the events for all the services that the broker registers
-            push.OnNotificationSent += NotificationSent;
-            push.OnChannelException += ChannelException;
-            push.OnServiceException += ServiceException;
-            push.OnNotificationFailed += NotificationFailed;
-            push.OnDeviceSubscriptionExpired += DeviceSubscriptionExpired;
-            push.OnDeviceSubscriptionChanged += DeviceSubscriptionChanged;
-            push.OnChannelCreated += ChannelCreated;
-            push.OnChannelDestroyed += ChannelDestroyed;
+            // Configuration
+            var appleConfig = new ApnsConfiguration(ApnsConfiguration.ApnsServerEnvironment.Production, appleCert, "");
+            var googleConfig = new GcmConfiguration(Properties.Resources.GoogleAPIKey);
 
-            try
+
+            // Create a new broker
+            var appleBroker = new ApnsServiceBroker(appleConfig);
+            var googleBroker = new GcmServiceBroker(googleConfig);
+
+            // Wire up events
+            appleBroker.OnNotificationFailed += (notification, aggregateEx) =>
             {
 
-                string sRoles = "";
-                for (int i = 0; i < RoleListBox.SelectedItems.Count; i++)
+                aggregateEx.Handle(ex =>
                 {
-                    sRoles += "ROLE LIKE '%" + RoleListBox.SelectedItems[i] + "%' OR ";
-                }
 
-                if (string.IsNullOrEmpty(sRoles))
-                {
-                    sRoles = "ROLE LIKE '%ALL%'";
-                }
-                else
-                {
-                    sRoles = sRoles + "OR";
-                    sRoles = System.Text.RegularExpressions.Regex.Replace(sRoles, "OR OR", "");
-                }
-
-                var appleCert = Properties.Resources.SDP_CERTIFICATE_DEV;
-
-                push.RegisterAppleService(new ApplePushChannelSettings(false, appleCert, ""));
-
-                push.RegisterGcmService(new GcmPushChannelSettings(Properties.Resources.GoogleAPIKey));
-
-                SqlConnection sConnection = new SqlConnection(Properties.Resources.SaiDatta);
-
-                DataTable DeviceIDDataTable = new DataTable();
-
-                sConnection.Open();
-
-                string sSQL = "SELECT DEVICE_ID,DEVICE_TYPE FROM NOTIFICATION_DEVICES WHERE " + sRoles;
-
-                SqlDataAdapter sAdapter = new SqlDataAdapter(sSQL, sConnection);
-                sAdapter.Fill(DeviceIDDataTable);
-
-                for (int i = 0; i < DeviceIDDataTable.Rows.Count; i++)
-                {
-                    if (Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_TYPE"]).ToUpper().Trim() == "IOS")
+                    // See what kind of exception it was to further diagnose
+                    if (ex is ApnsNotificationException)
                     {
-                        push.QueueNotification(new AppleNotification()
-                                                    .ForDeviceToken(Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_ID"]))
-                                                    .WithAlert(MessageTexBox.Text.Trim())
-                                                    .WithBadge(1));
+                        var apnsEx = ex as ApnsNotificationException;
+
+                        // Deal with the failed notification
+                        var n = apnsEx.Notification;
+
+                        Console.WriteLine("Notification Failed: ID={n.Identifier}, Code={apnsEx.ErrorStatusCode}");
+
+                    }
+                    else if (ex is ApnsConnectionException)
+                    {
+                        // Something failed while connecting (maybe bad cert?)
+                        Console.WriteLine("Notification Failed (Bad APNS Connection)!");
                     }
                     else
                     {
-                        push.QueueNotification(new GcmNotification().ForDeviceRegistrationId(Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_ID"]))
-                         .WithJson("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"http://saidattanj.org/images/banner24.png\"}"));
+                        Console.WriteLine("Notification Failed (Unknown Reason)!");
                     }
-                }
 
-                sConnection.Close();
-            }
-            catch (Exception ex)
+                    // Mark it as handled
+                    return true;
+                });
+            };
+
+            appleBroker.OnNotificationSucceeded += (notification) =>
+            {
+                Console.WriteLine("Notification Sent!");
+            };
+
+            // Wire up events
+            googleBroker.OnNotificationFailed += (notification, aggregateEx) =>
             {
 
+                aggregateEx.Handle(ex =>
+                {
+                    // Mark it as handled
+                    return true;
+                });
+            };
+
+            googleBroker.OnNotificationSucceeded += (notification) =>
+            {
+                Console.WriteLine("Notification Sent!");
+            };
+
+            // Start the broker
+            appleBroker.Start();
+            googleBroker.Start();
+
+            string sRoles = "";
+            for (int i = 0; i < RoleListBox.SelectedItems.Count; i++)
+            {
+                sRoles += "ROLE LIKE '%" + RoleListBox.SelectedItems[i] + "%' OR ";
             }
 
-            push.StopAllServices(waitForQueuesToFinish: true);
+            if (string.IsNullOrEmpty(sRoles))
+            {
+                sRoles = "ROLE LIKE '%ALL%'";
+            }
+            else
+            {
+                sRoles = sRoles + "OR";
+                sRoles = System.Text.RegularExpressions.Regex.Replace(sRoles, "OR OR", "");
+            }
 
-            MessageBox.Show("Push Notifications sent successfully!!!");
+            SqlConnection sConnection = new SqlConnection(Properties.Resources.SaiDatta);
+
+            DataTable DeviceIDDataTable = new DataTable();
+
+            sConnection.Open();
+
+            string sSQL = "SELECT DEVICE_ID,DEVICE_TYPE FROM NOTIFICATION_DEVICES WHERE " + sRoles;
+
+            SqlDataAdapter sAdapter = new SqlDataAdapter(sSQL, sConnection);
+            sAdapter.Fill(DeviceIDDataTable);
+
+            List<string> sDeviceIDList = new List<string>();
+
+            for (int i = 0; i < DeviceIDDataTable.Rows.Count; i++)
+            {
+                if (Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_TYPE"]).ToUpper().Trim() == "IOS")
+                {
+                    // Queue a notification to send
+                    appleBroker.QueueNotification(new ApnsNotification
+                    {
+                        DeviceToken = Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_ID"]),
+                        Payload = JObject.Parse("{\"aps\":{\"alert\":\"" + MessageTexBox.Text.Trim() + "\"}}"),
+
+                    });
+                }
+                else
+                {
+                    sDeviceIDList.Clear();
+                    sDeviceIDList.Add(Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_ID"]));
+
+                    googleBroker.QueueNotification(new GcmNotification
+                    {
+                        RegistrationIds = sDeviceIDList,
+                        Data = JObject.Parse("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"http://saidattanj.org/images/banner24.png\"}")
+                    });
+                }
+            }
+
+
+
+            // Stop the broker, wait for it to finish   
+            // This isn't done after every message, but after you're
+            // done with the broker
+            appleBroker.Stop();
+            googleBroker.Stop();
+
+            MessageBox.Show("Push Notification sent successfully");
+        }
+
+        public void SendNotifications1()
+        {
+
+            ////create the puchbroker object
+            //var push = new pushbr();
+            ////Wire up the events for all the services that the broker registers
+            //push.OnNotificationSent += NotificationSent;
+            ////push.OnChannelException += ChannelException;
+            //push.OnServiceException += ServiceException;
+            //push.OnNotificationFailed += NotificationFailed;
+            //push.OnDeviceSubscriptionExpired += DeviceSubscriptionExpired;
+            //push.OnDeviceSubscriptionChanged += DeviceSubscriptionChanged;
+            ////push.OnChannelCreated += ChannelCreated;
+            //push.OnChannelDestroyed += ChannelDestroyed;
+
+            //try
+            //{
+
+            //    string sRoles = "";
+            //    for (int i = 0; i < RoleListBox.SelectedItems.Count; i++)
+            //    {
+            //        sRoles += "ROLE LIKE '%" + RoleListBox.SelectedItems[i] + "%' OR ";
+            //    }
+
+            //    if (string.IsNullOrEmpty(sRoles))
+            //    {
+            //        sRoles = "ROLE LIKE '%ALL%'";
+            //    }
+            //    else
+            //    {
+            //        sRoles = sRoles + "OR";
+            //        sRoles = System.Text.RegularExpressions.Regex.Replace(sRoles, "OR OR", "");
+            //    }
+
+            //    //var appleCert = Properties.Resources.SDP_CERTIFICATE_DEV;
+            //    //push.RegisterAppleService(new ApplePushChannelSettings(false, appleCert, ""));
+
+            //    try
+            //    {
+            //        var appleCert = Properties.Resources.SDP_CERTIFICATE_PROD;
+
+            //        push.RegisterAppleService(new ApplePushChannelSettings(true, appleCert, ""));
+            //    }
+            //    catch (Exception ex)
+            //    {
+
+            //    }
+
+            //    push.RegisterGcmService(new GcmPushChannelSettings(Properties.Resources.GoogleAPIKey));
+
+            //    SqlConnection sConnection = new SqlConnection(Properties.Resources.SaiDatta);
+
+            //    DataTable DeviceIDDataTable = new DataTable();
+
+            //    sConnection.Open();
+
+            //    string sSQL = "SELECT DEVICE_ID,DEVICE_TYPE FROM NOTIFICATION_DEVICES WHERE " + sRoles;
+
+            //    SqlDataAdapter sAdapter = new SqlDataAdapter(sSQL, sConnection);
+            //    sAdapter.Fill(DeviceIDDataTable);
+
+            //    for (int i = 0; i < DeviceIDDataTable.Rows.Count; i++)
+            //    {
+            //        if (Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_TYPE"]).ToUpper().Trim() == "IOS")
+            //        {
+            //            push.QueueNotification(new AppleNotification()
+            //                                        .ForDeviceToken(Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_ID"]))
+            //                                        .WithAlert(MessageTexBox.Text.Trim())
+            //                                        .WithBadge(1));
+            //        }
+            //        else
+            //        {
+            //            //    push.QueueNotification(new GcmNotification().ForDeviceRegistrationId(Convert.ToString(DeviceIDDataTable.Rows[i]["DEVICE_ID"]))
+            //            //     .WithJson("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"http://saidattanj.org/images/banner24.png\"}"));
+            //        }
+            //    }
+
+            //    sConnection.Close();
+            //}
+            //catch (Exception ex)
+            //{
+
+            //}
+
+            //push.StopAllServices(waitForQueuesToFinish: true);
+
+            //MessageBox.Show("Push Notifications sent successfully!!!");
         }
 
         public void Sample()
@@ -252,12 +367,12 @@ namespace PushNotification
             //delete the device id from DB
         }
 
-        //this is fired when there is exception is raised by the channel
-        static void ChannelException
-            (object sender, IPushChannel channel, Exception exception)
-        {
-            //Do something here
-        }
+        ////this is fired when there is exception is raised by the channel
+        //static void ChannelException
+        //    (object sender, IPushChannel channel, Exception exception)
+        //{
+        //    //Do something here
+        //}
 
         //this is fired when there is exception is raised by the service
         static void ServiceException(object sender, Exception exception)
@@ -279,11 +394,11 @@ namespace PushNotification
             //Do something here
         }
 
-        //this is raised when the channel is created
-        static void ChannelCreated(object sender, IPushChannel pushChannel)
-        {
-            //Do something here
-        }
+        ////this is raised when the channel is created
+        //static void ChannelCreated(object sender, IPushChannel pushChannel)
+        //{
+        //    //Do something here
+        //}
 
         private void ResetButton_Click(object sender, EventArgs e)
         {

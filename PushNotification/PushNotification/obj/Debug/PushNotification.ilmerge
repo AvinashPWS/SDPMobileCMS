@@ -1,7 +1,9 @@
 PushNotification.exe
 Newtonsoft.Json.dll
-PushSharp.Android.dll
+PushSharp.Amazon.dll
 PushSharp.Apple.dll
+PushSharp.Blackberry.dll
 PushSharp.Core.dll
-System.Net.Http.Extensions.dll
-System.Net.Http.Primitives.dll
+PushSharp.Firefox.dll
+PushSharp.Google.dll
+PushSharp.Windows.dll

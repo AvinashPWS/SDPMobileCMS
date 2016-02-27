@@ -96,5 +96,15 @@ namespace PushNotification.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SDP_CERTIFICATE_PROD {
+            get {
+                object obj = ResourceManager.GetObject("SDP_CERTIFICATE_PROD", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
