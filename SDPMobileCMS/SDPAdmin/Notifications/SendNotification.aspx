@@ -118,7 +118,7 @@
                         <section class="scrollable padder">
                             <form id="form1" runat="server">
                                 <br />
-                                <asp:Button ID="NotificationSendButton" runat="server" Text="Dwonload PushNotification App" CssClass="btn btn-primary" OnClick="NotificationSendButton_Click" CausesValidation="False" />
+                                <asp:Button ID="NotificationSendButton" runat="server" Text="Download PushNotification App" CssClass="btn btn-primary" OnClick="NotificationSendButton_Click" CausesValidation="False" />
                             </form>
                         </section>
                     </section>
