@@ -6,3 +6,11 @@ C:\Users\anara\documents\visual studio 2013\Projects\SDPMobileCMS\SDPMobileCMS\b
 C:\Users\anara\documents\visual studio 2013\Projects\SDPMobileCMS\SDPMobileCMS\obj\Release\SDPMobileCMS.dll
 C:\Users\anara\documents\visual studio 2013\Projects\SDPMobileCMS\SDPMobileCMS\obj\Release\SDPMobileCMS.pdb
 C:\Users\anara\documents\visual studio 2013\Projects\SDPMobileCMS\SDPMobileCMS\obj\Release\SDPMobileCMS.csprojResolveAssemblyReference.cache
+C:\GITHUB\SDPMobileCMS\SDPMobileCMS\bin\SDPMobileCMS.dll.config
+C:\GITHUB\SDPMobileCMS\SDPMobileCMS\bin\SDPMobileCMS.dll
+C:\GITHUB\SDPMobileCMS\SDPMobileCMS\bin\SDPMobileCMS.pdb
+C:\GITHUB\SDPMobileCMS\SDPMobileCMS\bin\System.Data.dll
+C:\GITHUB\SDPMobileCMS\SDPMobileCMS\bin\System.Data.Entity.dll
+C:\GITHUB\SDPMobileCMS\SDPMobileCMS\obj\Release\SDPMobileCMS.csprojResolveAssemblyReference.cache
+C:\GITHUB\SDPMobileCMS\SDPMobileCMS\obj\Release\SDPMobileCMS.dll
+C:\GITHUB\SDPMobileCMS\SDPMobileCMS\obj\Release\SDPMobileCMS.pdb

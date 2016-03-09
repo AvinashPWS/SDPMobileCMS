@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\anara\Documents\Visual Studio 2013\Projects\SDPMobileCMS\RELEASE</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\GITHUB\SDPMobileCMS\RELEASE</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="API/SDPMobileService.aspx">
@@ -382,10 +382,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2016 20:01:48</publishTime>
     </File>
     <File Include="bin/AjaxControlToolkit.dll">
-      <publishTime>01/28/2016 20:07:05</publishTime>
+      <publishTime>02/19/2016 01:11:46</publishTime>
     </File>
     <File Include="bin/SDPMobileCMS.dll">
-      <publishTime>02/18/2016 13:27:24</publishTime>
+      <publishTime>03/08/2016 23:04:42</publishTime>
     </File>
     <File Include="bin/System.Data.dll">
       <publishTime>03/21/2014 04:19:19</publishTime>
@@ -424,85 +424,313 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2016 20:18:13</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>01/29/2016 12:06:35</publishTime>
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/20140322.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/annapurna.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/april_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/aug_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ayyapa-padipuja-1.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ayyapa-padipuja.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ayyappa-gl.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ayyappa.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/bahtukamma.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/balatripurasundari.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/banner24.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/bhishma_ekadasi.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/blood-drive.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ceremony.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/chinna-jeeyar.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/cover_page.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/cultural.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/datta.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/dec_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/diwali.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/fathersday.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/feb_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/festivals.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/gajalakshmi.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ganesh-abhishekam.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ganesh-chathurthi.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ganesh-nimarjan.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/gayatri.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/gouri.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/gurukulam.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/gurupoornima-1.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/gurupoornima-2.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/hanuman-jayanthi.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/IMG_3357.JPG">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/jan_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/july_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/june_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/kanakadurga.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/karthika-somavaram.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/kartika-latest.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/lalitha-sahasra.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/lalithamahayagnam.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/mahashivratri.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/makara-sankranti1.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/march_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/mata-karunamayi.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/may_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/meenakshi.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/navami.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/navavarna.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/nov_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/oct_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/pallakostavam.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/prana-prathistha.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/pratista-evening.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/pratista-event.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/punyathithi.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/rajarejeswari.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ramanavami.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/rama_chandra.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/sahasra-lingarchana.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/sai.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/samprokshana.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/saraswathi.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/sept_small.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/shirdi-head.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/shivratri.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/shivratri1.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/sthalaseva.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/swami-paripornananda.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ugadi-pratishta.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ugadi-pratishta2.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/ugadi.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/vasantha_panchami.png">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/VolunteersMeet.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
+    </File>
+    <File Include="IMAGES/yagnam.jpg">
+      <publishTime>02/19/2016 01:11:46</publishTime>
     </File>
     <File Include="Login.aspx">
       <publishTime>01/28/2016 20:01:49</publishTime>
     </File>
     <File Include="SDPAdmin/API/SDPMobileService.aspx">
-      <publishTime>01/28/2016 20:52:06</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/css/app.v1.css">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/css/font.css">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/css/landing.css">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/fontawesome-webfontba72.eot">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/fontawesome-webfontba72.svg">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/fontawesome-webfontba72.ttf">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/fontawesome-webfontba72.woff">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/fontawesome-webfontd41d.eot">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/glyphicons-halflings-regular-2.html">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/glyphicons-halflings-regular-3.html">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/glyphicons-halflings-regular-4.html">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/glyphicons-halflings-regular.html">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/glyphicons-halflings-regulard41d.html">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/opensans/opensans-bold-webfont.woff">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/opensans/opensans-light-webfont.woff">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/fonts/opensans/opensans-webfont.woff">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/images/ajax-loader.gif">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/images/avatar_default.jpg">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/images/logo.png">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/js/app.plugin.js">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/js/app.v1.js">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/js/jquery-ui-1.10.3.custom.min.js">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/js/jquery.ui.touch-punch.min.js">
-      <publishTime>01/28/2016 20:01:47</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appCore/js/landing.js">
-      <publishTime>01/28/2016 20:01:48</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/appData/EVENTS/AIUDIO.mp3">
       <publishTime>02/13/2016 08:28:56</publishTime>
@@ -595,67 +823,106 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2016 20:01:48</publishTime>
     </File>
     <File Include="SDPAdmin/Calendar/HinduCalendar.aspx">
-      <publishTime>02/13/2016 08:46:59</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Events/EventBanner.aspx">
-      <publishTime>02/13/2016 08:47:10</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Events/EventDaily.aspx">
-      <publishTime>02/13/2016 08:47:20</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Events/EventFlashNews.aspx">
-      <publishTime>02/13/2016 08:47:26</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Events/EventRegular.aspx">
-      <publishTime>02/13/2016 08:47:35</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Events/EventSponsors.aspx">
-      <publishTime>02/13/2016 08:47:42</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Events/EventUpcoming.aspx">
-      <publishTime>02/13/2016 08:47:49</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Gallery/Audio.aspx">
-      <publishTime>02/14/2016 09:40:11</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Gallery/Images.aspx">
-      <publishTime>02/13/2016 08:48:03</publishTime>
+      <publishTime>02/19/2016 01:11:48</publishTime>
     </File>
     <File Include="SDPAdmin/Gallery/Quotes.aspx">
-      <publishTime>02/13/2016 23:08:08</publishTime>
+      <publishTime>02/19/2016 01:11:49</publishTime>
     </File>
     <File Include="SDPAdmin/Gallery/Videos.aspx">
-      <publishTime>02/13/2016 08:48:19</publishTime>
+      <publishTime>02/19/2016 01:11:49</publishTime>
     </File>
     <File Include="SDPAdmin/Login.aspx">
-      <publishTime>01/28/2016 20:01:49</publishTime>
+      <publishTime>03/08/2016 23:04:01</publishTime>
     </File>
     <File Include="SDPAdmin/Notifications/FGAppCertificateTEST.p12">
       <publishTime>01/29/2016 21:04:20</publishTime>
     </File>
     <File Include="SDPAdmin/Notifications/SendNotification.aspx">
-      <publishTime>02/13/2016 08:48:29</publishTime>
+      <publishTime>02/19/2016 01:11:49</publishTime>
     </File>
     <File Include="SDPAdmin/PushNotification.exe">
-      <publishTime>01/29/2016 23:53:23</publishTime>
+      <publishTime>02/19/2016 01:11:49</publishTime>
     </File>
     <File Include="SDPAdmin/SDPModel.edmx.diagram">
       <publishTime>01/28/2016 21:07:40</publishTime>
     </File>
     <File Include="SDPAdmin/Seva/SevaAnnadamMedia.aspx">
-      <publishTime>02/13/2016 08:48:38</publishTime>
+      <publishTime>02/19/2016 01:11:49</publishTime>
     </File>
     <File Include="SDPAdmin/Seva/SevaSthalaFAQ.aspx">
-      <publishTime>02/13/2016 08:48:46</publishTime>
+      <publishTime>02/19/2016 01:11:49</publishTime>
     </File>
     <File Include="SDPAdmin/Seva/SevaSthalaMedia.aspx">
-      <publishTime>02/13/2016 08:48:54</publishTime>
+      <publishTime>02/19/2016 01:11:49</publishTime>
     </File>
     <File Include="SDPModel.edmx.diagram">
-      <publishTime>02/13/2016 01:42:26</publishTime>
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/EVENT_BANNER_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/EVENT_CALENDAR_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/EVENT_DAILY_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/EVENT_FLASH_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/EVENT_REGULAR_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/EVENT_SPONSOR_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/EVENT_UPCOMING_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/LIST_IMAGES_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/LIST_QUOTES_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/LIST_VIDEOS_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/NOTIFICATION_DEVICES_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/SEVA_STHALA_FAQ_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
+    </File>
+    <File Include="SP/SEVA_STHALA_MEDIA_insert.sql">
+      <publishTime>02/19/2016 01:11:49</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/18/2016 13:27:25</publishTime>
+      <publishTime>03/08/2016 22:59:28</publishTime>
     </File>
   </ItemGroup>
 </Project>

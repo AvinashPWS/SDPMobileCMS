@@ -70,6 +70,15 @@ namespace PushNotification.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to saidattanj123.
+        /// </summary>
+        internal static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Data Source=saidattapeetham.db.5249122.hostedresource.com;Integrated Security=False;User ID=saidattapeetham;Password=Djk73@4Dfj73;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False.
         /// </summary>
         internal static string SaiDatta {
@@ -104,6 +113,15 @@ namespace PushNotification.Properties {
             get {
                 object obj = ResourceManager.GetObject("SDP_CERTIFICATE_PROD", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to saidattanj.
+        /// </summary>
+        internal static string UserID {
+            get {
+                return ResourceManager.GetString("UserID", resourceCulture);
             }
         }
     }

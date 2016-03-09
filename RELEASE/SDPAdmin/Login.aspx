@@ -59,12 +59,12 @@
                                 <div class="form-group">
                                     <label class="control-label">
                                         User ID</label>
-                                    <asp:TextBox ID="UserIDTextbox" Text="saidattanj" runat="server" placeholder="User ID" CssClass="form-control input-lg"></asp:TextBox>
+                                    <asp:TextBox ID="UserIDTextbox" Text="" runat="server" placeholder="User ID" CssClass="form-control input-lg"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">
                                         Password</label>
-                                    <asp:TextBox ID="PasswordTextbox" runat="server" Text="1saidatta2nj3" placeholder="Password" CssClass="form-control input-lg"></asp:TextBox>
+                                    <asp:TextBox ID="PasswordTextbox" runat="server" Text="" TextMode="Password" placeholder="Password" CssClass="form-control input-lg"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label runat="server" id="LoginMessageLabel" class="control-label bg-danger">

@@ -16,7 +16,7 @@ namespace PushNotification
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Push());
+            Application.Run(new Login());
         }
     }
 }

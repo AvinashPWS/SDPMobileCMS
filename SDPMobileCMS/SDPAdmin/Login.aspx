@@ -64,7 +64,7 @@
                                 <div class="form-group">
                                     <label class="control-label">
                                         Password</label>
-                                    <asp:TextBox ID="PasswordTextbox" runat="server" Text="" placeholder="Password" CssClass="form-control input-lg"></asp:TextBox>
+                                    <asp:TextBox ID="PasswordTextbox" runat="server" Text="" TextMode="Password" placeholder="Password" CssClass="form-control input-lg"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label runat="server" id="LoginMessageLabel" class="control-label bg-danger">

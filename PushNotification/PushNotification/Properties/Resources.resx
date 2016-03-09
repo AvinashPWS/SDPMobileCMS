@@ -133,4 +133,10 @@
   <data name="SDP_CERTIFICATE_PROD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SDP_CERTIFICATE_PROD.p12;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>saidattanj123</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>saidattanj</value>
+  </data>
 </root>
