@@ -1,0 +1,18 @@
+USE [saidattapeetham]
+GO
+
+SET IDENTITY_INSERT [saidattapeetham].[dbo].[EVENT_DAILY] ON
+GO
+
+INSERT INTO [saidattapeetham].[dbo].[EVENT_DAILY]([ID],[EVENT_NAME],[EVENT_DATETIME],[EVENT_INFO],[EVENT_ATTACHMENT],[DATETIME]) VALUES(8,N'Kakad Arti(Morning Arti)',N'7.15 am',N'',N'',N'2016-01-24 01:45:16 PM')
+INSERT INTO [saidattapeetham].[dbo].[EVENT_DAILY]([ID],[EVENT_NAME],[EVENT_DATETIME],[EVENT_INFO],[EVENT_ATTACHMENT],[DATETIME]) VALUES(9,N'Mangala Snanam(Abhishekam)',N'8:15 am',N'',N'',N'2016-01-24 01:45:34 PM')
+INSERT INTO [saidattapeetham].[dbo].[EVENT_DAILY]([ID],[EVENT_NAME],[EVENT_DATETIME],[EVENT_INFO],[EVENT_ATTACHMENT],[DATETIME]) VALUES(10,N'Peetham Arti',N'9:00 am',N'',N'',N'2016-01-24 01:45:45 PM')
+INSERT INTO [saidattapeetham].[dbo].[EVENT_DAILY]([ID],[EVENT_NAME],[EVENT_DATETIME],[EVENT_INFO],[EVENT_ATTACHMENT],[DATETIME]) VALUES(11,N'Akhanda Arti(Madhyanna Arti)',N'12 pm',N'',N'',N'2016-01-24 01:45:58 PM')
+INSERT INTO [saidattapeetham].[dbo].[EVENT_DAILY]([ID],[EVENT_NAME],[EVENT_DATETIME],[EVENT_INFO],[EVENT_ATTACHMENT],[DATETIME]) VALUES(12,N'Dhoop Arti(Sandhya Arti)',N'6 pm',N'',N'',N'2016-01-24 01:46:10 PM')
+INSERT INTO [saidattapeetham].[dbo].[EVENT_DAILY]([ID],[EVENT_NAME],[EVENT_DATETIME],[EVENT_INFO],[EVENT_ATTACHMENT],[DATETIME]) VALUES(13,N'Seja Arti (Thursday 9.00 pm)',N'8.30 pm',N'',N'',N'2016-01-24 01:46:24 PM')
+GO
+print 'Inserted 6 records'
+
+SET IDENTITY_INSERT [saidattapeetham].[dbo].[EVENT_DAILY] OFF
+GO
+

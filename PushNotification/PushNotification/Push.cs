@@ -165,8 +165,8 @@ namespace PushNotification
                     googleBroker.QueueNotification(new GcmNotification
                     {
                         RegistrationIds = sDeviceIDList,
-                        Data = JObject.Parse("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"http://saidattanj.org/images/banner24.png\"}")
-                        //Data = JObject.Parse("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"\"}")
+                        //Data = JObject.Parse("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"http://saidattanj.org/images/banner24.png\"}")
+                        Data = JObject.Parse("{\"alert\":\"" + MessageTexBox.Text.Trim() + "\",\"badge\":1,\"sound\":\"sound.caf\",\"imageURL\":\"\"}")
                     });
                 }
             }
