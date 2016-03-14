@@ -34,6 +34,7 @@
             this.RoleListBox = new System.Windows.Forms.ListBox();
             this.SendButton = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MessageLabel
@@ -48,6 +49,7 @@
             // MessageTexBox
             // 
             this.MessageTexBox.Location = new System.Drawing.Point(257, 21);
+            this.MessageTexBox.MaxLength = 256;
             this.MessageTexBox.Multiline = true;
             this.MessageTexBox.Name = "MessageTexBox";
             this.MessageTexBox.Size = new System.Drawing.Size(373, 95);
@@ -97,11 +99,21 @@
             this.ResetButton.UseVisualStyleBackColor = true;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(257, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Only 256 characters allowed";
+            // 
             // Push
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 171);
+            this.ClientSize = new System.Drawing.Size(640, 165);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.SendButton);
             this.Controls.Add(this.RoleListBox);
@@ -109,6 +121,7 @@
             this.Controls.Add(this.MessageTexBox);
             this.Controls.Add(this.MessageLabel);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Push";
             this.Text = "Push";
             this.ResumeLayout(false);
@@ -124,5 +137,6 @@
         private System.Windows.Forms.ListBox RoleListBox;
         private System.Windows.Forms.Button SendButton;
         private System.Windows.Forms.Button ResetButton;
+        private System.Windows.Forms.Label label1;
     }
 }
