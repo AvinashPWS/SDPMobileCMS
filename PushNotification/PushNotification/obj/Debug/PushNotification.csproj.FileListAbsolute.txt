@@ -21,3 +21,4 @@ C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotificat
 C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.pdb
 C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.Push.resources
 C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\obj\Debug\PushNotification.Login.resources
+C:\GITHUB\SDPMobileCMS\PushNotification\PushNotification\bin\Debug\PushNotification.exe.config

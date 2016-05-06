@@ -42,9 +42,8 @@ namespace PushNotification
 
         public void SendNotifications()
         {
-
-            Push.ActiveForm.Enabled = false;
-
+            SendButton.Enabled = false;
+            ResetButton.Enabled = false;
 
             var appleCert = Properties.Resources.SDP_CERTIFICATE_PROD;
 
@@ -184,7 +183,7 @@ namespace PushNotification
             MessageTexBox.Text = "";
             RoleListBox.SelectedItems.Clear();
 
-            Push.ActiveForm.Enabled = true;
+            SendButton.Enabled = true;
         }
 
 

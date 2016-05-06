@@ -30,7 +30,10 @@ namespace PushNotification
                 Login.ActiveForm.Hide();
                 Push p = new Push();
                 p.Show();
-                
+            }
+            else
+            {
+                MessageBox.Show("Invalid Credentials", "Sai Datta Peetham - Pusher App");
             }
         }
     }

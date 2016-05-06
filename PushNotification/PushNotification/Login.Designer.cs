@@ -103,7 +103,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
-            this.Text = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sai Datta Peetham - Pusher App";
             this.ResumeLayout(false);
             this.PerformLayout();
 
